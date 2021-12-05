@@ -41,27 +41,34 @@ export default function RegisterView() {
     };
 
     return (
-        <div>
-            <h1>Страница регистрации</h1>
+        <div className="row align-items-center py-5">
+            <h1>Registration Page</h1>
 
-            <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
+            <form onSubmit={handleSubmit}
+                style={styles.form}
+                autoComplete="off"
+                className="mb-3"
+            >
+
                 <label style={styles.label}>
-                    Имя
+                    Name
                     <input type="text" name="name" value={name} onChange={handleChange} />
                 </label>
 
-                <label style={styles.label}>
-                    Почта
+                <label style={styles.label} className="form-floating mb-3">
+                    Email
                     <input
                         type="email"
                         name="email"
                         value={email}
+                        id="floatingInput"
                         onChange={handleChange}
                     />
+                    <span className="text-muted"> We'll never share your email with anyone else.</span>
                 </label>
 
                 <label style={styles.label}>
-                    Пароль
+                    Password
                     <input
                         type="password"
                         name="password"
@@ -70,7 +77,7 @@ export default function RegisterView() {
                     />
                 </label>
 
-                <button type="submit">Зарегистрироваться</button>
+                <button type="submit">Register</button>
             </form>
         </div>
     );

@@ -22,9 +22,9 @@ export default function UserMenu() {
 
     return (
         <div style={styles.container}>
-            <span style={styles.name}>Добро пожаловать, {name}</span>
+            <span style={styles.name}>Wellcome, {name}</span>
             <button type="button" onClick={() => dispatch(authOperations.logOut())}>
-                Выйти
+                LogOut
             </button>
         </div>
     );
