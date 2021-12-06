@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import { Form, Button } from 'react-bootstrap';
+// import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import s from './views.module.css';
 const styles = {
     form: {
         width: 320,
@@ -38,8 +39,8 @@ export default function LoginView() {
     };
 
     return (
-        <div>
-            <h1>LogIn Page</h1>
+        <div className={s.formContainer}>
+            <h1 className="h3 mb-3 fw-normal">LogIn Page</h1>
 
 
 
@@ -65,7 +66,7 @@ export default function LoginView() {
                     />
                 </label>
 
-                <button type="submit">Enter</button>
+                <button type="submit" className="w-100 btn btn-lg btn-primary">Enter</button>
             </form>
         </div>
     );

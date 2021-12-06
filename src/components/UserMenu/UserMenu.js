@@ -23,7 +23,7 @@ export default function UserMenu() {
     return (
         <div style={styles.container}>
             <span style={styles.name}>Wellcome, {name}</span>
-            <button type="button" onClick={() => dispatch(authOperations.logOut())}>
+            <button type="button" className="w-100 btn btn-lg btn-primary" onClick={() => dispatch(authOperations.logOut())}>
                 LogOut
             </button>
         </div>
