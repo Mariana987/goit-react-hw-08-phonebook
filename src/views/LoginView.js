@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-// import { Form, Button } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import s from './views.module.css';
 const styles = {
@@ -48,17 +48,19 @@ export default function LoginView() {
                 <label style={styles.label}>
                     Email
                     <input
+                        className='input-group-text'
                         type="email"
                         name="email"
                         value={email}
                         onChange={handleChange}
                     />
-                    <span className="text-muted"> We'll never share your email with anyone else.</span>
+                    <span className="text-muted"> * We'll never share your email with anyone else.</span>
                 </label>
 
                 <label style={styles.label}>
                     Password
                     <input
+                        className='input-group-text'
                         type="password"
                         name="password"
                         value={password}
@@ -79,32 +81,3 @@ export default function LoginView() {
 
 
 
-
-
-
-// eslint-disable-next-line no-lone-blocks
-{/* <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail" onSubmit={handleSubmit}>
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control t
-                        type="email"
-                        placeholder="Enter email"
-                        value={email}
-                        onChange={handleChange} />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={handleChange} />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form> */}

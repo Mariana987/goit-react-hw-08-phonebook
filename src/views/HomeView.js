@@ -16,7 +16,7 @@ const styles = {
 
 const HomeView = () => (
     <div style={styles.container}>
-        <h1 style={styles.title}>
+        <h1 style={styles.title} className="h3 mb-3 fw-normal">
             Welcome to your personal Phonebook. <br />
             Use and enjoy!
         </h1>

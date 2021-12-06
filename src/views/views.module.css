@@ -18,6 +18,6 @@
  
 }
 
-input:focus{
-  border-color: blue;
+input{
+  cursor: pointer;
 }

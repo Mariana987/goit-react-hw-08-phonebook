@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-// import { Form, Button, Label, Control } from 'react-bootstrap';
+
 import s from './views.module.css';
 const styles = {
     form: {
@@ -47,7 +47,7 @@ export default function RegisterView() {
 
     return (
         <div className={s.formContainer}>
-            <div className=" row align-items-center py-5 col-xl-5" >
+            <div >
                 <h1 className="h3 mb-3 fw-normal">Registration Page</h1>
 
                 <form onSubmit={handleSubmit}
@@ -60,7 +60,7 @@ export default function RegisterView() {
                         Name
 
                         <input
-                            className={s.input}
+                            className='input-group-text'
                             type="text"
                             name="name"
                             value={name}
@@ -70,19 +70,21 @@ export default function RegisterView() {
                     <label style={styles.label} className="mb-3">
                         Email
                         <input
+                            className='input-group-text'
                             type="email"
                             name="email"
                             value={email}
                             id="floatingInput"
                             onChange={handleChange}
                         />
-                        <span className="text-muted"> We'll never share your email with anyone else.</span>
+                        <span className="text-muted"> * We'll never share your email with anyone else.</span>
                     </label>
 
                     <label style={styles.label}
                     >
                         Password
                         <input
+                            className='input-group-text'
                             type="password"
                             name="password"
                             value={password}
